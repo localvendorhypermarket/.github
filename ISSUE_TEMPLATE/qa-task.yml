@@ -1,0 +1,75 @@
+name: QA Task
+description: Plan and execute QA validation
+title: "[QA] "
+labels: ["type:qa"]
+
+body:
+  - type: input
+    id: related_issue
+    attributes:
+      label: Related Development Issue
+      description: Link the feature, task or bug being tested.
+      placeholder: "https://github.com/org/repo/issues/123"
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: Testing Objective
+      description: What functionality needs validation?
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Preconditions and Test Data
+      description: Specify setup, roles and test data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scenarios
+    attributes:
+      label: Test Scenarios
+      placeholder: |
+        - [ ] Happy path
+        - [ ] Invalid input
+        - [ ] Boundary conditions
+        - [ ] Authorization checks
+        - [ ] Regression scenarios
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Results
+      description: Define the expected outcomes.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: result
+    attributes:
+      label: Execution Status
+      options:
+        - Not Executed
+        - Passed
+        - Failed
+        - Blocked
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Execution Evidence
+      description: Record results, screenshots and sanitized logs.
+
+  - type: textarea
+    id: defects
+    attributes:
+      label: Related Defects
+      description: Link bugs discovered during testing.

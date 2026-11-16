@@ -1,0 +1,68 @@
+name: Development Task
+description: Create a technical implementation task
+title: "[Task] "
+labels: ["type:task"]
+
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: Why is this task required?
+      placeholder: Explain the problem and intended outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Technical Scope
+      description: What needs to be implemented?
+      placeholder: |
+        - Component or module:
+        - Changes required:
+        - Out of scope:
+    validations:
+      required: true
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: Implementation Approach
+      description: Describe the proposed technical approach.
+      placeholder: |
+        Architecture:
+        APIs:
+        Database changes:
+        Dependencies:
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      placeholder: |
+        - [ ] Implementation completed
+        - [ ] Required tests pass
+        - [ ] Documentation updated
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Related issues, PRs, designs or blockers.
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Requirements
+      description: Explain how the changes should be validated.
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Rollback
+      description: Mention migration, compatibility or deployment risks.

@@ -1,0 +1,48 @@
+name: Feature
+description: Request a new product feature
+title: "[Feature] "
+labels: ["type:feature"]
+
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What problem are we solving?
+      placeholder: Describe the user need and expected outcome.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: What functionality should be implemented?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Define measurable conditions for completion.
+      placeholder: |
+        - [ ] Valid requests are processed successfully
+        - [ ] Invalid requests return appropriate errors
+        - [ ] Automated tests cover expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Related issues, APIs, designs or blockers.
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Requirements
+      description: How should developers and QA validate this feature?
+    validations:
+      required: true

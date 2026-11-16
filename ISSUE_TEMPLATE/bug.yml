@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a defect or unexpected behavior
+title: "[Bug] "
+labels: ["type:bug"]
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Explain what is broken.
+      placeholder: Describe the issue clearly.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide reproducible steps.
+      placeholder: |
+        1. Navigate to...
+        2. Perform...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, build, API version, etc.
+      placeholder: |
+        Environment: Local / CI / Production
+        Browser:
+        Application version:
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Attach screenshots or sanitized logs.
+      placeholder: Do not include secrets or personal data.
+
+  - type: textarea
+    id: regression
+    attributes:
+      label: Regression Testing
+      description: What related functionality should be retested?
